@@ -152,7 +152,8 @@ public class HongbaoService extends AccessibilityService {
         String content;
         try {
             AccessibilityNodeInfo i = node.getParent().getChild(0);
-            content = i.getText().toString();
+            //content = i.getText().toString();
+            content = Integer.valueOf(i.hashCode()).toString();
         } catch (NullPointerException npe) {
             return null;
         }
