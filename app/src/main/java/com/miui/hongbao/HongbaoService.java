@@ -110,7 +110,8 @@ public class HongbaoService extends AccessibilityService {
                 this.WECHAT_VIEW_SELF_CH, this.WECHAT_VIEW_OTHERS_CH});
 
         if (!nodes1.isEmpty()) {
-            String nodeId = Integer.toHexString(System.identityHashCode(this.rootNodeInfo));
+            //String nodeId = Integer.toHexString(System.identityHashCode(this.rootNodeInfo));
+            String nodeId = getHongbaoText(nodes1.get(nodes1.size() - 1)); 
             if (!nodeId.equals(lastFetchedHongbaoId)) {
                 mLuckyMoneyReceived = true;
                 mReceiveNode = nodes1;
